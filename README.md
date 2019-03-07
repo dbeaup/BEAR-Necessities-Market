@@ -99,8 +99,8 @@ ACTIVATE_MAC_ENV:
 $ source env/bin/activate
 
 ACTIVATE_WINDOWS_ENV:
-$ cd env/Scripts
-$ ./activate
+$ souce env/Scripts/activate
+--> (env) should show up in bash shell to verify activation
 
 --> Install server dependencies
 $ pip install -r requirements.txt --no-cache-dir
