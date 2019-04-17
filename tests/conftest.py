@@ -1,6 +1,7 @@
 # [App]
 from backend.app import create_app, db
 from backend.models.users import UserModel
+from backend.models.order import OrdersModel
 from backend.config import TestingConfig
 
 # [Python]
@@ -11,6 +12,12 @@ import pytest
 def new_user():
     user = UserModel('mhawes24@gmail.com', 'some_password')
     return user
+
+
+@pytest.fixture(scope='module')
+def new_order():
+    order = OrdersModel('test@email.com')
+    return order
 
     
 @pytest.yield_fixture(scope='session')
